@@ -28,9 +28,9 @@ and open decisions `[D#]` inline and resolve every marker to a table row. Write
 an inapplicable section as `Not applicable — <reason>`; never pad one.
 
 Do not grade the draft. Grading happens only when the user asks. If they do,
-use the bundled grader at `./tools/spec-grader/bin/spec-grade`, or
-`spec-grader/bin/spec-grade` in the workspace; do not download or install a
-grader. Run at most one revision cycle: grade, apply only evidence-backed and
+use the bundled grader at `./tools/spec-grader/bin/spec-grade`, then
+`../spec-grader/bin/spec-grade`, then `spec-grader/bin/spec-grade` elsewhere in
+the workspace; do not download or install a grader. Run at most one revision cycle: grade, apply only evidence-backed and
 gate-clearing fixes, regrade once, stop. Record anything needing a judgment
 call as an open decision instead of applying it.
 
