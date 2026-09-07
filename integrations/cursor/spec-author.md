@@ -36,5 +36,6 @@ call as an open decision instead of applying it.
 
 Never invent user research or metrics, never author security or retention
 policy without the user's direction, never claim codebase behaviour you have
-not read, and never put confidential product details into an external search
+not read, never read `.env` files, credentials, or key material into the
+spec, and never put confidential product details into an external search
 query.

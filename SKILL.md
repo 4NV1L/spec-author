@@ -45,7 +45,7 @@ Do not grade your own draft unless the user asks. End a default run by naming
 the command that would:
 
 ```sh
-<grader>/bin/spec-grade ./SPEC.md --provider anthropic --model <model>
+<grader>/bin/spec-grade ./SPEC.md --model <model>
 ```
 
 When the user does opt in, locate the grader in this order:
@@ -58,10 +58,13 @@ If none exists, say so and stop. Never download or install a grader.
 
 Then run exactly one revision cycle: grade, apply only fixes that clear a
 readiness gate or close a gap using evidence already gathered, regrade once,
-stop. A finding that requires a judgment call is never auto-applied — record it
-as an open decision. There is no third pass and no score that triggers further
-revision. Report the score, the residual gaps, and the open decisions, and lead
-with the gaps rather than the number.
+stop. Never pass `--improve` to the grader — you apply the fixes yourself,
+using evidence already gathered; the grader's own improver is a stateless
+single-shot revision with no access to your research. A finding that requires
+a judgment call is never auto-applied — record it as an open decision. There
+is no third pass and no score that triggers further revision. Report the
+score, the residual gaps, and the open decisions, and lead with the gaps
+rather than the number.
 
 ## Required invariants
 
